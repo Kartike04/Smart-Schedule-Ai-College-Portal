@@ -1,4 +1,5 @@
 {
+  "name": "kartike-smart-schedule-ai",
   "rewrites": [
     {
       "source": "/(.*)",
