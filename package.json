@@ -1,0 +1,20 @@
+{
+  "name": "kartike-smart-schedule-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart Schedule AI - College Portal Fullstack Deployment",
+  "main": "api/index.js",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.13.0",
+    "xlsx": "^0.18.5"
+  }
+}
