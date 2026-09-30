@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: smart-schedule-ai-backend
+    env: node
+    region: singapore
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: JWT_SECRET
+        value: tsdc_smart_schedule_secret_key_2026_998877
+      - key: MONGO_URI
+        value: mongodb://127.0.0.1:27017/smart_schedule_ai
