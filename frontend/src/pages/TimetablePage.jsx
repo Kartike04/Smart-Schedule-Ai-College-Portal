@@ -40,9 +40,16 @@ const TimetablePage = ({ currentDept, onDeptChange }) => {
 
   useEffect(() => {
     if (!paramClass) {
-      if (department === 'B.Sc. IT') setClassName('T.Y. B.Sc. (IT)');
-      else if (department === 'B.Sc. CS') setClassName('T.Y. B.Sc. (CS)');
-      else if (department === 'B.Sc. DS') setClassName('T.Y. B.Sc. (DS)');
+      if (department === 'B.Sc. IT') {
+        setClassName('T.Y. B.Sc. (IT)');
+        setDivision('C');
+      } else if (department === 'B.Sc. CS') {
+        setClassName('T.Y. B.Sc. (CS)');
+        setDivision('A');
+      } else if (department === 'B.Sc. DS') {
+        setClassName('T.Y. B.Sc. (DS)');
+        setDivision('A');
+      }
     }
   }, [department]);
 
@@ -73,6 +80,16 @@ const TimetablePage = ({ currentDept, onDeptChange }) => {
 
   const handleDeptSelect = (newDept) => {
     setDepartment(newDept);
+    if (newDept === 'B.Sc. IT') {
+      setClassName('T.Y. B.Sc. (IT)');
+      setDivision('C');
+    } else if (newDept === 'B.Sc. CS') {
+      setClassName('T.Y. B.Sc. (CS)');
+      setDivision('A');
+    } else if (newDept === 'B.Sc. DS') {
+      setClassName('T.Y. B.Sc. (DS)');
+      setDivision('A');
+    }
     if (onDeptChange) onDeptChange(newDept);
   };
 
